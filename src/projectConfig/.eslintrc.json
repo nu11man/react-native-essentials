@@ -1,0 +1,36 @@
+{
+  "env": {
+      "browser": true,
+      "es2021": true,
+      "react-native/react-native": true
+  },
+  "extends": [
+      "plugin:react/recommended",
+      "standard-with-typescript",
+      "airbnb",
+      "airbnb/hooks",
+      "prettier",
+      "prettier/react",
+      "plugin:import/errors",
+      "plugin:import/warnings"
+  ],
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  "overrides": [
+  ],
+  "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+  },
+  "plugins": [
+      "react",
+      "@typescript-eslint",
+      "react-native"
+  ],
+  "rules": {
+  }
+}
