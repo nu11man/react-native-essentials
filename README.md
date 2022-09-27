@@ -1,29 +1,75 @@
-# react-native-essentials
-A compilation of essential components, configs and utils for React Native projects
+# React Native Essentials
 
-# Add development dependencies and configurations
-[x] eslint
-[x] prettier
-[x] typescript
-[x] module resolver
-[x] reactotron (for redux and apisauce)
+### What is this?
+This repository contains a compilation of essential components, configurations and utilities that you can use when starting a React Native projects.
 
-# Add production-ready libraries
-[x] react-native-reanimated
-[x] @reduxjs/toolkit and react-redux
-[x] react-native-fast-image
-[x] apisauce
-[x] react-native-config
-[x] react-native-device-info
-[x] redux-persist
-[x] react-native-mmkv
 
-# Pending changes
-[ ] Add custom input
-[ ] Add custom label
-[ ] Add custom button
-[ ] Add react-hook-form
-[ ] Add react-i18next
-[ ] Add authentication flow
-[ ] Add button tap navigation
-[ ] Add RTK Query
+### How can I use this repo?
+The idea is that you create a React Native project:
+
+```shell
+   npx react-native init AwesomeProject --template react-native-template-typescript
+```
+
+Then you can downdload the `creator.sh` (or copy the content) and store it in the root folder of your new React Native project (where `package.json` is located).
+
+Remember to add execution permissions:
+
+```bash
+   chmod u+x creator.sh
+```
+
+Then execute it:
+
+```
+   ./creator.sh
+```
+
+This shell is going to clone this repository, install all the libraries and set up configurations listed bellow and the remove any temporary file from including this repo.
+
+Now you can run the application with:
+
+```
+npx react-native run-ios
+```
+
+#### Addional steps for specific libraries
+- **React Native Config**: In other to get the React Native config package to work in Android we need to add a plugin to our app, as [mentioned by the lib docs](https://github.com/luggit/react-native-config#extra-step-for-android). In the second line of `android/app/build.gradle` write this:
+
+   ```
+      apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+   ```
+
+### Add development dependencies and configurations
+- [x] Eslint
+- [x] Prettier
+- [x] Typescript
+- [x] [Module resolver](https://www.npmjs.com/package/babel-plugin-module-resolver)
+- [x] [Reactotron (for network, redux and apisauce debugging)](https://github.com/infinitered/reactotron)
+
+### Currently supported and configured production-ready packages
+- [x] Animations with the awesome [React Native Reanimated v2.x](https://docs.swmansion.com/react-native-reanimated/)
+- [x] State management with [@reduxjs/toolkit](https://redux-toolkit.js.org/)
+- [x] Image management with [react-native-fast-image](https://github.com/DylanVann/react-native-fast-image)
+- [x] Network management with [Apisauce](https://github.com/infinitered/apisauce)
+- [x] Config variables managed with [React Native Config](https://github.com/luggit/react-native-config)
+- [x] Devices information handled by [React Native Device Info](https://github.com/react-native-device-info/react-native-device-info)
+- [x] Redux state persistance handled by [Redux Persist](https://github.com/rt2zz/redux-persist)
+- [x] Data storage managed by high performance package [React Native MMKV](https://github.com/mrousavy/react-native-mmkv)
+
+### Pending changes
+- [ ] Add custom input
+- [ ] Add custom label
+- [ ] Add custom button
+- [ ] Add react-hook-form
+- [ ] Add react-i18next
+- [ ] Add Notifee support
+- [ ] Add authentication flow
+- [ ] Add button tap navigation
+- [ ] Add RTK Query
+- [ ] Document how to configure Android Flavors
+- [ ] Document how to configure iOS Schemes
+- [ ] Document how to generate APK/AAB packages
+
+### How to contribute
+Pending section...
