@@ -1,7 +1,7 @@
 # React Native Essentials
 
 ### What is this?
-This repository contains a compilation of essential components, configurations and utilities that you can use when starting a React Native projects.
+This repository contains a compilation of essential components, configurations and utilities that you can use when starting a new React Native project.
 
 
 ### How can I use this repo?
@@ -25,7 +25,7 @@ Then execute it:
    ./creator.sh
 ```
 
-This shell is going to clone this repository, install all the libraries and set up configurations listed bellow and the remove any temporary file from including this repo.
+This shell is going to clone this repository, install all the libraries and set up the configurations listed bellow. Finally it will remove any temporary file from your filesystem including this repository.
 
 Now you can run the application with:
 
@@ -34,7 +34,7 @@ npx react-native run-ios
 ```
 
 #### Addional steps for specific libraries
-- **React Native Config**: In other to get the React Native config package to work in Android we need to add a plugin to our app, as [mentioned by the lib docs](https://github.com/luggit/react-native-config#extra-step-for-android). In the second line of `android/app/build.gradle` write this:
+- **React Native Config**: In other to get the React Native Config package to work in Android we need to add a plugin to our app, as [mentioned by the lib docs](https://github.com/luggit/react-native-config#extra-step-for-android). In the second line of `android/app/build.gradle` write this:
 
    ```
       apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
@@ -53,23 +53,27 @@ npx react-native run-ios
 - [x] Image management with [react-native-fast-image](https://github.com/DylanVann/react-native-fast-image)
 - [x] Network management with [Apisauce](https://github.com/infinitered/apisauce)
 - [x] Config variables managed with [React Native Config](https://github.com/luggit/react-native-config)
-- [x] Devices information handled by [React Native Device Info](https://github.com/react-native-device-info/react-native-device-info)
+- [x] Device information managed by [React Native Device Info](https://github.com/react-native-device-info/react-native-device-info)
 - [x] Redux state persistance handled by [Redux Persist](https://github.com/rt2zz/redux-persist)
 - [x] Data storage managed by high performance package [React Native MMKV](https://github.com/mrousavy/react-native-mmkv)
 
-### Pending changes
+### Pending packages to be added
 - [ ] Add custom input
 - [ ] Add custom label
 - [ ] Add custom button
 - [ ] Add react-hook-form
 - [ ] Add react-i18next
 - [ ] Add Notifee support
+- [ ] Add RTK Query
 - [ ] Add authentication flow
 - [ ] Add button tap navigation
-- [ ] Add RTK Query
+
+### Pending documentation
 - [ ] Document how to configure Android Flavors
 - [ ] Document how to configure iOS Schemes
 - [ ] Document how to generate APK/AAB packages
+- [ ] Document how to test React Native applications with React Native Testing Library
+- [ ] Document how to implement CI/CD with Github Actions
 
 ### How to contribute
 Pending section...
