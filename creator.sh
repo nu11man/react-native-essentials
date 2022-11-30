@@ -25,7 +25,9 @@ yarn add react-native-device-info
 yarn add redux-persist
 yarn add react-native-mmkv
 yarn add react-native-localize
-yarn add i18next react-i18next
+yarn add i18next react-i18next intl-pluralrules
+yarn add @react-navigation/native react-native-screens react-native-safe-area-context @react-navigation/native-stack
+
 
 clear
 
@@ -66,7 +68,24 @@ echo ""
 echo "Downloading react native essentials repo..."
 cd $PROJECT_ROOT
 git clone git@github.com:nu11man/react-native-essentials.git
-cp -r /Users/juliocesarecheverri/Developer/pocs/react-native-essentials/* react-native-essentials/
+# mkdir react-native-essentials
+# cp -r /Users/juliocesarecheverri/Developer/pocs/react-native-essentials/* react-native-essentials/
+
+sleep $DELAY
+echo ""
+echo "Populate application files"
+cp -r $GIT_REPO_NAME/src/app/* src/app
+cp -r $GIT_REPO_NAME/src/config/* src/config
+cp $GIT_REPO_NAME/src/constants/* src/constants
+cp $GIT_REPO_NAME/src/interfaces/* src/interfaces
+cp -r $GIT_REPO_NAME/src/redux/* src/redux
+cp $GIT_REPO_NAME/src/services/* src/services
+cp $GIT_REPO_NAME/src/utils/* src/utils
+
+sleep $DELAY
+echo ""
+echo "Populate project configuration files"
+cp -r $GIT_REPO_NAME/src/projectConfig/. ./
 
 # Install custom Nunito Fonts
 # ToDo: Make this an optional procedure
@@ -74,24 +93,7 @@ mkdir -p assets/fonts
 cp $GIT_REPO_NAME/src/assets/fonts/* assets/fonts
 npx react-native-asset
 
-sleep $DELAY
-echo ""
-echo "Populate application files"
-cp -r $GIT_REPO_NAME/src/app/* src/app
-cp $GIT_REPO_NAME/src/config/* src/config
-cp $GIT_REPO_NAME/src/constants/* src/constants
-cp $GIT_REPO_NAME/src/interfaces/* src/interfaces
-cp -r $GIT_REPO_NAME/src/redux/* src/redux
-cp $GIT_REPO_NAME/src/services/* src/services
-cp $GIT_REPO_NAME/src/utils/* src/utils
-
-
-sleep $DELAY
-echo ""
-echo "Populate project configuration files"
-cp -r $GIT_REPO_NAME/src/projectConfig/. ./
-
-# Clean filesystem
+# # Clean filesystem
 sleep $DELAY
 echo ""
 echo "Remove unused files"

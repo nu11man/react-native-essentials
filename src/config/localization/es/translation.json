@@ -1,0 +1,12 @@
+{
+  "_comment": "src/config/localization/es/translation.json",
+  "home": {
+    "header": "Fotografía Astronómica del Día",
+    "subHeader": "API de la NASA",
+    "title": "Título",
+    "description": "Descripción",
+    "copyright": "Autor(es)",
+    "date": "Fecha",
+    "mainButtonLabel": "Siguiente Imagen"
+  }
+}
