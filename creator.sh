@@ -24,6 +24,8 @@ yarn add react-native-config
 yarn add react-native-device-info
 yarn add redux-persist
 yarn add react-native-mmkv
+yarn add react-native-localize
+yarn add i18next react-i18next
 
 clear
 
