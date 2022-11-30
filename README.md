@@ -1,5 +1,14 @@
 # React Native Essentials
 
+### Content
+1. What is this?
+2. How can I use this repo?
+   1. Additional steps
+3. Supported packages and configurations
+4. Pending packaes and configurations
+5. Documentation
+6. How to contribute
+
 ### What is this?
 This repository contains a compilation of essential packages, components, configurations and utilities that you can use when starting a new React Native project with Typescript support.
 
