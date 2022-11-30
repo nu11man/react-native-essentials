@@ -15,6 +15,7 @@ This reposiotory creates a minimal working application that shows you how to use
 - [x] [Reactotron (for network, redux and apisauce debugging)](https://github.com/infinitered/reactotron)
 
 ### Currently supported and configured production-ready packages
+- [x] Scaling utils
 - [x] Animations with the awesome [React Native Reanimated v2.x](https://docs.swmansion.com/react-native-reanimated/)
 - [x] State management with [@reduxjs/toolkit](https://redux-toolkit.js.org/)
 - [x] Image management with [react-native-fast-image](https://github.com/DylanVann/react-native-fast-image)
@@ -95,6 +96,9 @@ After the shell finishes, there are some manual configurations that needs to be 
 - [ ] Add Font Awesome for icon management
 - [ ] Add authentication flow
 - [ ] Add button tap navigation
+- [ ] Add spash screen
+- [ ] Add bottom sheet modals
+- [ ] Add deeplinking configuration
 - [ ] Add RTK Query
 - [ ] Add custom input
 - [ ] Add custom label
@@ -106,7 +110,13 @@ After the shell finishes, there are some manual configurations that needs to be 
 - [ ] Document how to configure Android Flavors
 - [ ] Document how to configure iOS Schemes
 - [ ] Document how to generate APK/AAB packages
+- [ ] How to properly use safe area context
+- [ ] How to add icons for iOS and Android applications
+- [ ] How to manage status bar color
+- [ ] How to manage color schemes
+- [ ] How to use the scaling utils
 - [ ] Document how to test React Native applications with React Native Testing Library
+- [ ] How to test React Native apps with Detox
 - [ ] Document how to implement CI/CD with Github Actions
 
 #### How to contribute
