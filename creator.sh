@@ -26,7 +26,7 @@ yarn add redux-persist
 yarn add react-native-mmkv
 yarn add react-native-localize
 yarn add i18next react-i18next intl-pluralrules
-yarn add @react-navigation/native react-native-screens react-native-safe-area-context @react-navigation/native-stack
+yarn add @react-navigation/native react-native-screens react-native-safe-area-context @react-navigation/native-stack @react-navigation/bottom-tabs
 
 
 clear
