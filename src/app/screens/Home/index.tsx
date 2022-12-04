@@ -14,14 +14,20 @@ import { useAppSelector, useAppDispatch } from '@redux/hooks';
 import { getNasaPictureOfTheDay } from '@redux/slices/nasa';
 
 import styles from './styles';
+import { TabStackNavigationProps } from '@app/navigation/types';
+import { Screens } from '@app/navigation/constants';
 
-const Home = () => {
+type HomeProps = TabStackNavigationProps<Screens.HOME>;
+
+const Home = ({ navigation }: HomeProps) => {
   const dispatch = useAppDispatch();
   const { t } = useTranslation();
   const apodData = useAppSelector(state => state.nasa.nasaApodElement);
   const apodLoading = useAppSelector(state => state.nasa.nasaApodElementLoading);
 
   const handlePress = () => dispatch(getNasaPictureOfTheDay());
+  const handleNavigation = () =>
+    navigation.navigate(Screens.SEARCH, { keyword: 'Search from Home' });
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -66,6 +72,9 @@ const Home = () => {
           ) : (
             <Text style={styles.buttonText}>{t('home.mainButtonLabel')}</Text>
           )}
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={handleNavigation} disabled={apodLoading}>
+          <Text style={styles.buttonText}>{t('home.navigationButtonLabel')}</Text>
         </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>

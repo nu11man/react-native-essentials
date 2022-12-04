@@ -1,5 +1,15 @@
 {
   "_comment": "src/config/localization/en/translation.json",
+  "signIn": {
+    "header": "Sign In",
+    "navigationButtonLabel": "Go to Home",
+    "backButtonLabel": "Go back"
+  },
+  "signUp": {
+    "header": "Sign Up",
+    "navigationButtonLabel": "Go to Home",
+    "backButtonLabel": "Go back"
+  },
   "home": {
     "header": "Astronomy Picture of the Day",
     "subHeader": "NASA API",
@@ -7,6 +17,27 @@
     "description": "Description",
     "copyright": "Copyright",
     "date": "Date",
-    "mainButtonLabel": "Next Picture"
+    "mainButtonLabel": "Next Picture",
+    "navigationButtonLabel": "Go to Search"
+  },
+  "profile": {
+    "header": "Profile",
+    "navigationButtonLabel": "Go to Search",
+    "backButtonLabel": "Go back"
+  },
+  "settings": {
+    "header": "Settings",
+    "navigationButtonLabel": "Go to Search",
+    "backButtonLabel": "Go back"
+  },
+  "search": {
+    "header": "Search",
+    "navigationButtonLabel": "Go to Details",
+    "backButtonLabel": "Go back"
+  },
+  "detail": {
+    "header": "Detail",
+    "navigationButtonLabel": "Go to Home",
+    "backButtonLabel": "Go back"
   }
 }

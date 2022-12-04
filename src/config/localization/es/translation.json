@@ -1,5 +1,15 @@
 {
   "_comment": "src/config/localization/es/translation.json",
+  "signIn": {
+    "header": "Iniciar Sesión",
+    "navigationButtonLabel": "Navegar al Inicio",
+    "backButtonLabel": "Regresar"
+  },
+  "signUp": {
+    "header": "Crear Cuenta",
+    "navigationButtonLabel": "Navegar al Inicio",
+    "backButtonLabel": "Regresar"
+  },
   "home": {
     "header": "Fotografía Astronómica del Día",
     "subHeader": "API de la NASA",
@@ -7,6 +17,27 @@
     "description": "Descripción",
     "copyright": "Autor(es)",
     "date": "Fecha",
-    "mainButtonLabel": "Siguiente Imagen"
+    "mainButtonLabel": "Siguiente Imagen",
+    "navigationButtonLabel": "Navegar a Búsqueda"
+  },
+  "profile": {
+    "header": "Perfil",
+    "navigationButtonLabel": "Navegar a Búsqueda",
+    "backButtonLabel": "Regresar"
+  },
+  "settings": {
+    "header": "Configuraciones",
+    "navigationButtonLabel": "Navegar a Búsqueda",
+    "backButtonLabel": "Regresar"
+  },
+  "search": {
+    "header": "Búsqueda",
+    "navigationButtonLabel": "Navegar a Detalle",
+    "backButtonLabel": "Regresar"
+  },
+  "detail": {
+    "header": "Detalle",
+    "navigationButtonLabel": "Navegar al Inicio",
+    "backButtonLabel": "Regresar"
   }
 }
