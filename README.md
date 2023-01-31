@@ -47,7 +47,7 @@ To take the most out of this project you need to create a React Native project w
 Then you can downdload the `creator.sh` (or copy the content) and store it in the root folder of your new React Native project (where `package.json` is located). You can do that by executing this line:
 
 ```bash
-   curl https://github.com/nu11man/react-native-essentials/blob/main/creator.sh --output creator.sh
+   curl https://raw.githubusercontent.com/nu11man/react-native-essentials/main/creator.sh --output creator.sh
 ```
 
 Remember to add execution permissions:
