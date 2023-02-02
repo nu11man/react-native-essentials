@@ -10,12 +10,12 @@ import {
 import FastImage from 'react-native-fast-image';
 import { useTranslation } from 'react-i18next';
 
+import { Screens } from '@constants/navigation';
+import { TabStackNavigationProps } from '@interfaces/navigation';
 import { useAppSelector, useAppDispatch } from '@redux/hooks';
 import { getNasaPictureOfTheDay } from '@redux/slices/nasa';
 
 import styles from './styles';
-import { TabStackNavigationProps } from '@app/navigation/types';
-import { Screens } from '@app/navigation/constants';
 
 type HomeProps = TabStackNavigationProps<Screens.HOME>;
 

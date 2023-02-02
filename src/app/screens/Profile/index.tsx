@@ -2,8 +2,8 @@ import React from 'react';
 import { ScrollView, Text, TouchableOpacity } from 'react-native';
 import { useTranslation } from 'react-i18next';
 
-import { Screens } from '@app/navigation/constants';
-import { TabStackNavigationProps } from '@app/navigation/types';
+import { Screens } from '@constants/navigation';
+import { TabStackNavigationProps } from '@interfaces/navigation';
 
 import styles from './styles';
 

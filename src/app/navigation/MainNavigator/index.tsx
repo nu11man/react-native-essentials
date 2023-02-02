@@ -2,16 +2,15 @@ import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import Home from '@app/screens/Home';
-import Profile from '@app/screens/Profile';
-import Settings from '@app/screens/Settings';
-import SignIn from '@app/screens/SignIn';
-import SignUp from '@app/screens/SignUp';
-import Search from '@app/screens/Search';
-import Detail from '@app/screens/Detail';
-
-import { TabStackParamList, MainStackParamList } from '../types';
-import { Screens } from '../constants';
+import { Screens } from '@constants/navigation';
+import { TabStackParamList, MainStackParamList } from '@interfaces/navigation';
+import Home from '@screens/Home';
+import Profile from '@screens/Profile';
+import Settings from '@screens/Settings';
+import SignIn from '@screens/SignIn';
+import SignUp from '@screens/SignUp';
+import Search from '@screens/Search';
+import Detail from '@screens/Detail';
 
 const Tab = createBottomTabNavigator<TabStackParamList>();
 
