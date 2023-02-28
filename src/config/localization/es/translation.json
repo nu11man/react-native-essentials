@@ -1,43 +1,42 @@
 {
   "_comment": "src/config/localization/es/translation.json",
-  "signIn": {
+  "SIGN_IN": {
     "header": "Iniciar Sesión",
     "navigationButtonLabel": "Navegar al Inicio",
     "backButtonLabel": "Regresar"
   },
-  "signUp": {
+  "SIGN_UP": {
     "header": "Crear Cuenta",
     "navigationButtonLabel": "Navegar al Inicio",
     "backButtonLabel": "Regresar"
   },
-  "home": {
+  "HOME": {
     "header": "Fotografía Astronómica del Día",
-    "subHeader": "API de la NASA",
+    "subHeader": "API de la NASA"
+  },
+  "PROFILE": {
+    "header": "Área en Construcción"
+  },
+  "BOOKMARKS": {
+    "header": "Área en Construcción"
+  },
+  "DETAIL": {
+    "header": "Detalle",
     "title": "Título",
     "description": "Descripción",
-    "copyright": "Autor(es)",
     "date": "Fecha",
-    "mainButtonLabel": "Siguiente Imagen",
-    "navigationButtonLabel": "Navegar a Búsqueda"
+    "copyright": "Autor(es)"
   },
-  "profile": {
-    "header": "Perfil",
-    "navigationButtonLabel": "Navegar a Búsqueda",
-    "backButtonLabel": "Regresar"
-  },
-  "settings": {
-    "header": "Configuraciones",
-    "navigationButtonLabel": "Navegar a Búsqueda",
-    "backButtonLabel": "Regresar"
-  },
-  "search": {
-    "header": "Búsqueda",
-    "navigationButtonLabel": "Navegar a Detalle",
-    "backButtonLabel": "Regresar"
-  },
-  "detail": {
-    "header": "Detalle",
-    "navigationButtonLabel": "Navegar al Inicio",
-    "backButtonLabel": "Regresar"
+  "navigation": {
+    "headers": {
+      "HOME": "Inicio",
+      "DETAIL": "Vista Detallada",
+      "PROFILE": "Mi Perfil"
+    },
+    "navbar": {
+      "HOME": "Explorar",
+      "BOOKMARKS": "Favoritos",
+      "PROFILE": "Perfil"
+    }
   }
 }

@@ -13,6 +13,7 @@ export const NORMAL = 'Normal';
 export const ITALIC = 'Italic';
 // SIZES
 export const SIZES = {
+  XXXSMALL: 8,
   XXSMALL: 10,
   XSMALL: 12,
   SMALL: 14,

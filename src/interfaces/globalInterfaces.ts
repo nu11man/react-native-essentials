@@ -9,3 +9,5 @@ export type GenericObjectInterface<T> = {
 export type StringObject = GenericObjectInterface<string>;
 
 export type NumberObject = GenericObjectInterface<number>;
+
+export type ListKeyExtractor<T> = (item: T, index: number) => string;

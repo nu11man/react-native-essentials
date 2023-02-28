@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 import fonts from '@config/fonts';
-import { darkBackground, darkSecondaryBackground } from '@constants/colors';
+import { darkBackground, lightBackground } from '@constants/colors';
 
 export default StyleSheet.create({
   screen: {
@@ -19,7 +19,7 @@ export default StyleSheet.create({
     paddingHorizontal: 25,
     marginTop: 40,
     alignItems: 'center',
-    backgroundColor: darkSecondaryBackground,
+    backgroundColor: lightBackground,
     borderRadius: 14,
     minWidth: 120
   },

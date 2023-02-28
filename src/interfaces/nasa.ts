@@ -7,4 +7,5 @@ export interface NasaApodElement {
   copyright: string;
   media_type: string;
   service_version: string;
+  id: string;
 }

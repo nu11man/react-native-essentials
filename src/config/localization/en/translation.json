@@ -1,43 +1,42 @@
 {
   "_comment": "src/config/localization/en/translation.json",
-  "signIn": {
+  "SIGN_IN": {
     "header": "Sign In",
     "navigationButtonLabel": "Go to Home",
     "backButtonLabel": "Go back"
   },
-  "signUp": {
+  "SING_UP": {
     "header": "Sign Up",
     "navigationButtonLabel": "Go to Home",
     "backButtonLabel": "Go back"
   },
-  "home": {
+  "HOME": {
     "header": "Astronomy Picture of the Day",
-    "subHeader": "NASA API",
+    "subHeader": "NASA API"
+  },
+  "PROFILE": {
+    "header": "Work in Progress"
+  },
+  "BOOKMARKS": {
+    "header": "Work in Progress"
+  },
+  "DETAIL": {
+    "header": "Detail",
     "title": "Title",
     "description": "Description",
     "copyright": "Copyright",
-    "date": "Date",
-    "mainButtonLabel": "Next Picture",
-    "navigationButtonLabel": "Go to Search"
+    "date": "Date"
   },
-  "profile": {
-    "header": "Profile",
-    "navigationButtonLabel": "Go to Search",
-    "backButtonLabel": "Go back"
-  },
-  "settings": {
-    "header": "Settings",
-    "navigationButtonLabel": "Go to Search",
-    "backButtonLabel": "Go back"
-  },
-  "search": {
-    "header": "Search",
-    "navigationButtonLabel": "Go to Details",
-    "backButtonLabel": "Go back"
-  },
-  "detail": {
-    "header": "Detail",
-    "navigationButtonLabel": "Go to Home",
-    "backButtonLabel": "Go back"
+  "navigation": {
+    "headers": {
+      "HOME": "Explore",
+      "DETAIL": "Detailed View",
+      "PROFILE": "Profile"
+    },
+    "navbar": {
+      "HOME": "Explore",
+      "BOOKMARKS": "Bookmarks",
+      "PROFILE": "Profile"
+    }
   }
 }

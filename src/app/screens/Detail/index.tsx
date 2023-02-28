@@ -1,29 +1,58 @@
 import React from 'react';
-import { ScrollView, Text, TouchableOpacity } from 'react-native';
+import { ScrollView, Text, View } from 'react-native';
+import FastImage from 'react-native-fast-image';
 import { useTranslation } from 'react-i18next';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { Screens } from '@constants/navigation';
 import { MainStackNavigationProps } from '@interfaces/navigation';
+import { useGetApodItemsQuery } from '@redux/apis/nasa';
 
 import styles from './styles';
+import { darkBackground } from '@constants/colors';
 
 type DetailProps = MainStackNavigationProps<Screens.DETAIL>;
 
-const Detail = ({ navigation }: DetailProps) => {
+const Detail = ({ route }: DetailProps) => {
   const { t } = useTranslation();
-
-  const handlePressNavigate = () => navigation.navigate(Screens.HOME);
-  const handlePressBack = () => navigation.goBack();
+  const { bottom } = useSafeAreaInsets();
+  const apodId = route.params.apodId;
+  const { data: astronomyElement } = useGetApodItemsQuery(undefined, {
+    selectFromResult: ({ data }) => ({ data: data?.filter(item => item.id === apodId)[0] })
+  });
 
   return (
-    <ScrollView bounces={false} contentContainerStyle={styles.screen}>
-      <Text style={styles.header}>{t('detail.header')}</Text>
-      <TouchableOpacity style={styles.button} onPress={handlePressNavigate}>
-        <Text style={styles.buttonText}>{t('detail.navigationButtonLabel')}</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={handlePressBack}>
-        <Text style={styles.buttonText}>{t('detail.backButtonLabel')}</Text>
-      </TouchableOpacity>
+    <ScrollView
+      contentContainerStyle={[styles.screen, { paddingBottom: Math.max(bottom, 20) }]}
+      style={{ backgroundColor: darkBackground }}
+      showsVerticalScrollIndicator={false}
+    >
+      <View style={styles.mainContainer}>
+        <FastImage
+          style={styles.image}
+          source={{
+            uri: astronomyElement?.url,
+            priority: FastImage.priority.normal
+          }}
+          resizeMode={FastImage.resizeMode.stretch}
+        />
+        <View style={styles.contentContainer}>
+          <View style={styles.descriptionContainer}>
+            <Text style={[styles.sectionTitle, styles.firstSectionTitle]}>{t('DETAIL.title')}</Text>
+            <Text style={styles.sectionContent}>{astronomyElement?.title}</Text>
+            <Text style={styles.sectionTitle}>{t('DETAIL.description')}</Text>
+            <Text style={styles.sectionContent}>{astronomyElement?.explanation}</Text>
+            <Text style={styles.sectionTitle}>{t('DETAIL.date')}</Text>
+            <Text style={styles.sectionContent}>{astronomyElement?.date}</Text>
+            {astronomyElement?.copyright && (
+              <View>
+                <Text style={styles.sectionTitle}>{t('DETAIL.copyright')}</Text>
+                <Text style={styles.sectionContent}>{astronomyElement?.copyright}</Text>
+              </View>
+            )}
+          </View>
+        </View>
+      </View>
     </ScrollView>
   );
 };

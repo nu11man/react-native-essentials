@@ -4,22 +4,27 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import { Screens } from '@constants/navigation';
 import { TabStackParamList, MainStackParamList } from '@interfaces/navigation';
+import Bookmarks from '@screens/Bookmarks';
+import Detail from '@screens/Detail';
 import Home from '@screens/Home';
 import Profile from '@screens/Profile';
-import Settings from '@screens/Settings';
 import SignIn from '@screens/SignIn';
 import SignUp from '@screens/SignUp';
-import Search from '@screens/Search';
-import Detail from '@screens/Detail';
+
+import Header from './components/Header';
+import NavigationBar from './components/NavigationBar';
 
 const Tab = createBottomTabNavigator<TabStackParamList>();
 
 const TabStack = () => {
   return (
-    <Tab.Navigator screenOptions={{ headerShown: false }}>
+    <Tab.Navigator
+      screenOptions={{ headerShown: false }}
+      tabBar={props => <NavigationBar {...props} />}
+    >
       <Tab.Screen name={Screens.HOME} component={Home} />
+      <Tab.Screen name={Screens.BOOKMARKS} component={Bookmarks} />
       <Tab.Screen name={Screens.PROFILE} component={Profile} />
-      <Tab.Screen name={Screens.SETTINGS} component={Settings} />
     </Tab.Navigator>
   );
 };
@@ -29,12 +34,15 @@ const AppStack = createNativeStackNavigator<MainStackParamList>();
 const AppNavigator = () => {
   const isUserAuth = true;
   return (
-    <AppStack.Navigator screenOptions={{ headerShown: false }}>
+    <AppStack.Navigator>
       {isUserAuth ? (
-        <AppStack.Group>
-          <AppStack.Screen name={Screens.MAIN} component={TabStack} />
+        <AppStack.Group screenOptions={{ header: props => <Header {...props} /> }}>
+          <AppStack.Screen
+            name={Screens.MAIN}
+            component={TabStack}
+            options={{ headerShown: false }}
+          />
           <AppStack.Screen name={Screens.DETAIL} component={Detail} />
-          <AppStack.Screen name={Screens.SEARCH} component={Search} />
         </AppStack.Group>
       ) : (
         <AppStack.Group>

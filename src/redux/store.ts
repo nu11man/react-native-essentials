@@ -15,13 +15,15 @@ import { reduxStorage } from '@config/storage';
 
 import counterReducer from './slices/counter';
 import nasaReducer from './slices/nasa';
+import { nasaApi } from './apis/nasa';
 
 const reduxEnhacers = [];
 if (__DEV__) reduxEnhacers.push(Reactotron.createEnhancer!());
 
 const rootReducer = combineReducers({
   counter: counterReducer,
-  nasa: nasaReducer
+  nasa: nasaReducer,
+  [nasaApi.reducerPath]: nasaApi.reducer
 });
 
 const persistConfig = {
@@ -38,7 +40,7 @@ const store = configureStore({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
       }
-    }),
+    }).concat(nasaApi.middleware),
   enhancers: reduxEnhacers
 });
 

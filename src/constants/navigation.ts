@@ -3,8 +3,7 @@ export enum Screens {
   MAIN = 'MAIN',
   PROFILE = 'PROFILE',
   DETAIL = 'DETAIL',
-  SEARCH = 'SEARCH',
-  SETTINGS = 'SETTINGS',
+  BOOKMARKS = 'BOOKMARKS',
   SIGN_IN = 'SIGN_IN',
   SIGN_UP = 'SIGN_UP'
 }
