@@ -19,6 +19,7 @@ export const SIZES = {
   SMALL: 14,
   MEDIUM: 16,
   XMEDIUM: 18,
-  BIG: 20,
-  XBIG: 36
+  BIG: 22,
+  XBIG: 24,
+  XXBIG: 36
 };

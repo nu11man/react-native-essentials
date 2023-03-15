@@ -1,4 +1,3 @@
-import Reactotron from '@config/reactotronConfig';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import {
   persistReducer,
@@ -12,6 +11,7 @@ import {
 } from 'redux-persist';
 
 import { reduxStorage } from '@config/storage';
+import Reactotron from '@config/reactotronConfig';
 
 import counterReducer from './slices/counter';
 import nasaReducer from './slices/nasa';
@@ -33,18 +33,25 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-const store = configureStore({
-  reducer: persistedReducer,
-  middleware: getDefaultMiddleware =>
-    getDefaultMiddleware({
-      serializableCheck: {
-        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
-      }
-    }).concat(nasaApi.middleware),
-  enhancers: reduxEnhacers
-});
+export const setupStore = (preloadedState?: PreloadedState<RootStateType>) => {
+  return configureStore({
+    reducer: persistedReducer,
+    middleware: getDefaultMiddleware =>
+      getDefaultMiddleware({
+        serializableCheck: {
+          ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
+        },
+        immutableCheck: { warnAfter: 128 }
+      }),
+    enhancers: reduxEnhacers,
+    preloadedState
+  });
+};
+
+const store = setupStore();
 
 export const persistor = persistStore(store);
-export type RootState = ReturnType<typeof store.getState>;
+export type RootStateType = ReturnType<typeof rootReducer>;
+export type AppStoreType = ReturnType<typeof setupStore>;
 export type AppDispatch = typeof store.dispatch;
 export default store;
