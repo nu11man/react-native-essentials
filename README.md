@@ -16,33 +16,14 @@ This reposiotory creates a minimal working application that shows you how to use
 
 ---
 
-### Currently supported dependencies and configurations
-- [x] Eslint
-- [x] Prettier
-- [x] Typescript
-- [x] [Module resolver](https://www.npmjs.com/package/babel-plugin-module-resolver)
-- [x] [Reactotron (for network, redux and apisauce debugging)](https://github.com/infinitered/reactotron)
-
-### Currently supported and configured production-ready packages
-- [x] Scaling utils
-- [x] Animations with the awesome [React Native Reanimated v2.x](https://docs.swmansion.com/react-native-reanimated/)
-- [x] State management with [@reduxjs/toolkit](https://redux-toolkit.js.org/)
-- [x] Image management with [react-native-fast-image](https://github.com/DylanVann/react-native-fast-image)
-- [x] Network management with [Apisauce](https://github.com/infinitered/apisauce)
-- [x] Config variables managed with [React Native Config](https://github.com/luggit/react-native-config)
-- [x] Device information managed by [React Native Device Info](https://github.com/react-native-device-info/react-native-device-info)
-- [x] Redux state persistance handled by [Redux Persist](https://github.com/rt2zz/redux-persist)
-- [x] Data storage managed by high performance package [React Native MMKV](https://github.com/mrousavy/react-native-mmkv)
-- [x] Get Locale device preferences [React Native Localize](react-native-localize)
-- [x] Internationalization support with [i18next](https://www.i18next.com/) [React i18next](https://react.i18next.com/)
-
----
 ### How can I use this repo?
 To take the most out of this project you need to create a React Native project with Typescript support:
 
 ```shell
-   npx react-native init AwesomeProject --template react-native-template-typescript
+   npx react-native@0.70.6 init AwesomeProject --template react-native-template-typescript
 ```
+
+*Note*: React Native 0.70.6 is the latest tested version feel free to chooce another version.
 
 Then you can downdload the `creator.sh` (or copy the content) and store it in the root folder of your new React Native project (where `package.json` is located). You can do that by executing this line:
 
@@ -101,6 +82,27 @@ After the shell finishes, there are some manual configurations that needs to be 
 
 ---
 
+### Currently supported dependencies and configurations
+- [x] Eslint
+- [x] Prettier
+- [x] Typescript
+- [x] [Module resolver](https://www.npmjs.com/package/babel-plugin-module-resolver)
+- [x] [Reactotron (for network, redux and apisauce debugging)](https://github.com/infinitered/reactotron)
+
+### Currently supported and configured production-ready packages
+- [x] Scaling utils
+- [x] Animations with the awesome [React Native Reanimated v2.x](https://docs.swmansion.com/react-native-reanimated/)
+- [x] State management with [@reduxjs/toolkit](https://redux-toolkit.js.org/)
+- [x] Image management with [react-native-fast-image](https://github.com/DylanVann/react-native-fast-image)
+- [x] Network management with [Apisauce](https://github.com/infinitered/apisauce)
+- [x] Config variables managed with [React Native Config](https://github.com/luggit/react-native-config)
+- [x] Device information managed by [React Native Device Info](https://github.com/react-native-device-info/react-native-device-info)
+- [x] Redux state persistance handled by [Redux Persist](https://github.com/rt2zz/redux-persist)
+- [x] Data storage managed by high performance package [React Native MMKV](https://github.com/mrousavy/react-native-mmkv)
+- [x] Get Locale device preferences [React Native Localize](react-native-localize)
+- [x] Internationalization support with [i18next](https://www.i18next.com/) [React i18next](https://react.i18next.com/)
+
+---
 #### Pending packages to be added
 - [ ] Add Font Awesome for icon management
 - [ ] Add authentication flow
