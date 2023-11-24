@@ -27,6 +27,11 @@ yarn add react-native-mmkv
 yarn add react-native-localize
 yarn add i18next react-i18next intl-pluralrules
 yarn add @react-navigation/native react-native-screens react-native-safe-area-context @react-navigation/native-stack @react-navigation/bottom-tabs
+yarn add @fortawesome/react-native-fontawesome @fortawesome/fontawesome-svg-core react-native-svg
+yarn add @fortawesome/free-solid-svg-icons
+yarn add @fortawesome/free-brands-svg-icons
+yarn add @fortawesome/free-regular-svg-icons
+
 
 
 clear
