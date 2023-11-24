@@ -1,4 +1,4 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import { PreloadedState, combineReducers, configureStore } from '@reduxjs/toolkit';
 import {
   persistReducer,
   persistStore,
@@ -15,7 +15,7 @@ import Reactotron from '@config/reactotronConfig';
 
 import counterReducer from './slices/counter';
 import nasaReducer from './slices/nasa';
-import { nasaApi } from './apis/nasa';
+import { nasaApi } from './api/nasa';
 
 const reduxEnhacers = [];
 if (__DEV__) reduxEnhacers.push(Reactotron.createEnhancer!());
@@ -42,7 +42,7 @@ export const setupStore = (preloadedState?: PreloadedState<RootStateType>) => {
           ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
         },
         immutableCheck: { warnAfter: 128 }
-      }),
+      }).concat(nasaApi.middleware),
     enhancers: reduxEnhacers,
     preloadedState
   });
