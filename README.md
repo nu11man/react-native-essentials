@@ -80,6 +80,8 @@ After the shell finishes, there are some manual configurations that needs to be 
    ```
    This change is required to avoid crashes related to View state being not persisted consistently across Activity restarts.
 
+- **Font Awesome**: With this initial config you will have the free version of the Font-Awesome library (`free-solid-svg-icons`, `free-brands-svg-icons`, `free-regular-svg-icons`). If you are a pro subscriber you'll need to follow [extra steps](https://fontawesome.com/docs/web/use-with/react-native) to connect your account.
+
 ---
 
 ### Currently supported dependencies and configurations
