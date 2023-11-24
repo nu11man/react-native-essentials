@@ -23,7 +23,7 @@ yarn add apisauce
 yarn add react-native-config
 yarn add react-native-device-info
 yarn add redux-persist
-yarn add react-native-mmkv
+yarn add react-native-mmkv@2.5.1
 yarn add react-native-localize
 yarn add i18next react-i18next intl-pluralrules
 yarn add @react-navigation/native react-native-screens react-native-safe-area-context @react-navigation/native-stack @react-navigation/bottom-tabs

@@ -82,6 +82,7 @@ After the shell finishes, there are some manual configurations that needs to be 
 
 - **Font Awesome**: With this initial config you will have the free version of the Font-Awesome library (`free-solid-svg-icons`, `free-brands-svg-icons`, `free-regular-svg-icons`). If you are a pro subscriber you'll need to follow [extra steps](https://fontawesome.com/docs/web/use-with/react-native) to connect your account.
 
+- **React Native MMKV**: Currently the versión used for this builder is RN 0.70.6 and the latests React Native MMKV versions doesn't support versions prior to RN 0.71. So, if you have created your project with RN 0.70.6 using this builder, we automatically installed MMKV 2.5.1. *We will move to newer MMKV version when the react native version is updates* [Refer to this link to know more about the Android issue related to this versioning](https://github.com/mrousavy/react-native-mmkv/issues/500)
 ---
 
 ### Currently supported dependencies and configurations
