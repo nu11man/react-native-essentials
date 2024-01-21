@@ -1,14 +1,29 @@
 import { StyleSheet } from 'react-native';
 
+import { colors } from '@constants/colors';
+import fonts from '@config/fonts';
+
 export const styles = StyleSheet.create({
   container: {
-    width: '100%',
+    minWidth: '100%',
     marginBottom: 30
   },
+  error: {
+    ...fonts.labelText,
+    color: colors.red.primary
+  },
+  errorContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 4
+  },
+  errorIcon: {
+    marginRight: 8
+  },
   label: {
+    backgroundColor: colors.solid.white,
     position: 'absolute',
     color: '#aaa'
-    // backgroundColor: 'white'
   },
   outlineLabel: {
     marginLeft: 11,

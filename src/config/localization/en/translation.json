@@ -2,6 +2,9 @@
   "_comment": "src/config/localization/en/translation.json",
   "SIGN_IN": {
     "header": "Sign In",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "submit": "Sign In",
     "navigationButtonLabel": "Go to Home",
     "backButtonLabel": "Go back"
   },

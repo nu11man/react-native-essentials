@@ -2,6 +2,7 @@ import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+import { useAppSelector } from '@redux/hooks';
 import { Screens } from '@constants/navigation';
 import { TabStackParamList, MainStackParamList } from '@interfaces/navigation';
 import Bookmarks from '@screens/Bookmarks';
@@ -32,7 +33,7 @@ const TabStack = () => {
 const AppStack = createNativeStackNavigator<MainStackParamList>();
 
 const AppNavigator = () => {
-  const isUserAuth = true;
+  const isUserAuth = useAppSelector(state => state.auth.isLoggedIn);
   return (
     <AppStack.Navigator>
       {isUserAuth ? (
@@ -45,7 +46,7 @@ const AppNavigator = () => {
           <AppStack.Screen name={Screens.DETAIL} component={Detail} />
         </AppStack.Group>
       ) : (
-        <AppStack.Group>
+        <AppStack.Group screenOptions={{ headerShown: false }}>
           <AppStack.Screen name={Screens.SIGN_IN} component={SignIn} />
           <AppStack.Screen name={Screens.SIGN_UP} component={SignUp} />
         </AppStack.Group>

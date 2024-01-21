@@ -15,14 +15,16 @@ import Reactotron from '@config/reactotronConfig';
 
 import counterReducer from './slices/counter';
 import nasaReducer from './slices/nasa';
+import authReducer from './slices/auth';
 import { nasaApi } from './api/nasa';
 
-const reduxEnhacers = [];
+const reduxEnhacers: any[] = [];
 if (__DEV__) reduxEnhacers.push(Reactotron.createEnhancer!());
 
 const rootReducer = combineReducers({
   counter: counterReducer,
   nasa: nasaReducer,
+  auth: authReducer,
   [nasaApi.reducerPath]: nasaApi.reducer
 });
 

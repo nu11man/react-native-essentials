@@ -2,6 +2,9 @@
   "_comment": "src/config/localization/es/translation.json",
   "SIGN_IN": {
     "header": "Iniciar Sesión",
+    "emailLabel": "Correo",
+    "passwordLabel": "Contraseña",
+    "submit": "Ingresar",
     "navigationButtonLabel": "Navegar al Inicio",
     "backButtonLabel": "Regresar"
   },

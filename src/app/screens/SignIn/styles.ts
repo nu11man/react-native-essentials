@@ -1,18 +1,22 @@
 import { StyleSheet } from 'react-native';
 
 import fonts from '@config/fonts';
-import { darkBackground, lightBackground } from '@constants/colors';
+import { colors, darkBackground, lightBackground } from '@constants/colors';
 
 export default StyleSheet.create({
+  safeArea: {
+    backgroundColor: colors.gray.dark,
+    flexGrow: 1
+  },
   screen: {
     alignItems: 'center',
     flexGrow: 1,
     padding: 20,
-    justifyContent: 'space-between',
-    backgroundColor: darkBackground
+    backgroundColor: colors.solid.white
   },
   header: {
-    ...fonts.headerFont
+    ...fonts.headerFont,
+    color: colors.violet.primary
   },
   button: {
     paddingVertical: 10,
@@ -25,5 +29,8 @@ export default StyleSheet.create({
   },
   buttonText: {
     ...fonts.titleFont
+  },
+  form: {
+    marginTop: 100
   }
 });

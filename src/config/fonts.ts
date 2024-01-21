@@ -6,12 +6,11 @@ import { fontMaker } from '@utils/fontUtils';
 // I only recommend using family if you have more than one Font Family in the App.
 export default {
   baseFont: fontMaker({ size: SIZES.MEDIUM, color: black }),
-  headerFont: fontMaker({ size: SIZES.MEDIUM, color: white, weight: EXTRA_BOLD }),
+  headerFont: fontMaker({ size: SIZES.BIG, color: white, weight: EXTRA_BOLD }),
   titleFont: fontMaker({ size: SIZES.XSMALL, color: white, weight: BOLD }),
   paragraphFont: fontMaker({ size: SIZES.XSMALL, color: white }),
   semiBoldFont: fontMaker({ weight: SEMIBOLD, size: SIZES.MEDIUM, color: black }),
   boldFont: fontMaker({ weight: BOLD, size: SIZES.MEDIUM, color: black }),
-
   bigTitle: fontMaker({ weight: BOLD, size: SIZES.XMEDIUM, color: white }),
   mediumTitle: fontMaker({ weight: BOLD, size: SIZES.SMALL, color: white }),
   title: fontMaker({ weight: BOLD, size: SIZES.XSMALL, color: white }),
