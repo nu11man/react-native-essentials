@@ -9,7 +9,7 @@ import { Screens } from '@constants/navigation';
 import { TabStackNavigationProps } from '@interfaces/navigation';
 import { NasaApodElement } from '@interfaces/nasa';
 import { ListKeyExtractor } from '@interfaces/globalInterfaces';
-import { useGetApodItemsQuery } from '@redux/apis/nasa';
+import { useGetApodItemsQuery } from '@redux/api/nasa';
 
 import styles from './styles';
 

@@ -6,7 +6,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { Screens } from '@constants/navigation';
 import { MainStackNavigationProps } from '@interfaces/navigation';
-import { useGetApodItemsQuery } from '@redux/apis/nasa';
+import { useGetApodItemsQuery } from '@redux/api/nasa';
 
 import styles from './styles';
 import { darkBackground } from '@constants/colors';
