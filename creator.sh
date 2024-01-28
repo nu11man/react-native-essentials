@@ -89,6 +89,7 @@ cp $GIT_REPO_NAME/src/interfaces/* src/interfaces
 cp -r $GIT_REPO_NAME/src/redux/* src/redux
 cp $GIT_REPO_NAME/src/services/* src/services
 cp $GIT_REPO_NAME/src/utils/* src/utils
+cp $GIT_REPO_NAME/src/__tests__/* __tests__
 
 sleep $DELAY
 echo ""
