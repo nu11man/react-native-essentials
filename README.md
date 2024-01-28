@@ -57,7 +57,7 @@ npx react-native run-ios
 
 After the shell finishes, some manual configurations need to be applied for a few packages to work properly. These additional steps are listed below:
 
-- **Unit Testing**: As @testing-library/react-native is now configured in the project you just need to this script to your _package.json_: `"test": "jest"` and run the default test.
+- **Unit Testing**: As @testing-library/react-native is now configured in the project you just need to remove the Jest configuration from your _package.json_ and run the default test.
 
 - **React Native Config**: In other to get the React Native Config package to work in Android we need to add a plugin to our app, as [mentioned by the lib docs](https://github.com/luggit/react-native-config#extra-step-for-android). In the second line of `android/app/build.gradle` write this:
 
