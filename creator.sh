@@ -41,7 +41,7 @@ clear
 
 # Create filesystem
 echo "Creating first level directories..."
-mainDirectories=("src" "__tests__" "__mocks__")
+mainDirectories=("src" "jest" "__tests__" "__mocks__")
 for i in "${mainDirectories[@]}"
 do
 	echo $i
@@ -94,6 +94,7 @@ sleep $DELAY
 echo ""
 echo "Populate project configuration files"
 cp -r $GIT_REPO_NAME/src/projectConfig/. ./
+cp jestSetup.js jest/
 
 # Install custom Nunito Fonts
 # ToDo: Make this an optional procedure
