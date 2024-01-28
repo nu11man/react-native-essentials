@@ -1,9 +1,19 @@
 global.__DEV__ = false;
+
+import '@testing-library/react-native/extend-expect';
+import 'react-native-gesture-handler/jestSetup';
+import mockRNDeviceInfo from 'react-native-device-info/jest/react-native-device-info-mock';
+
+jest.mock('react-native-device-info', () => mockRNDeviceInfo);
+
 jest.mock('@fortawesome/react-native-fontawesome', () => {
   const React = require('react');
   const IconMock = ({ children, ...props }) => React.createElement('svg', props, children);
   return { FontAwesomeIcon: IconMock };
 });
+
+// Silence the warning: Animated: `useNativeDriver` is not supported because the native animated module is missing
+jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 
 jest.mock('react-native-app-auth', () => {
   authorize: jest.fn();
@@ -43,3 +53,14 @@ jest.mock('redux-persist', () => ({
   PURGE: 'persist/PURGE',
   REGISTER: 'persist/REGISTER'
 }));
+
+// include this section and the NativeAnimatedHelper section for mocking react-native-reanimated
+jest.mock('react-native-reanimated', () => {
+  const Reanimated = require('react-native-reanimated/mock');
+
+  // The mock for `call` immediately calls the callback which is incorrect
+  // So we override it with a no-op
+  Reanimated.default.call = () => {};
+
+  return Reanimated;
+});

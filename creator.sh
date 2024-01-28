@@ -5,7 +5,7 @@ PROJECT_ROOT=$(pwd)
 GIT_REPO_NAME="react-native-essentials"
 
 # Remove deprecated dependencies
-yarn remove eslint @react-native-community/eslint-config
+yarn remove eslint @react-native-community/eslint-config jest @types/jest
 
 # Install dev dependencies
 yarn add --dev eslint@8.54.0 eslint-plugin-react-native@4.1.0
@@ -14,6 +14,8 @@ yarn add --dev eslint-config-prettier@9.0.0
 yarn add --dev babel-plugin-module-resolver@5.0.0
 yarn add --dev eslint-plugin-import@2.29.0 eslint-import-resolver-babel-module@5.3.2
 yarn add --dev reactotron-redux@3.1.3 reactotron-react-native@5.0.3 reactotron-apisauce@3.0.0
+yarn add --dev @testing-library/react-native@12.4.3
+yarn add --dev jest@29.7.0 @types/jest@29.5.11 ts-jest@29.1.2 ts-node@10.9.2
 
 # Install direct dependencies
 yarn add react-native-reanimated@3.5.4
@@ -26,6 +28,7 @@ yarn add redux-persist@6.0.0
 yarn add react-native-mmkv@2.5.1
 yarn add react-native-localize@3.0.3
 yarn add i18next@23.7.6 react-i18next@13.5.0 intl-pluralrules@2.0.1
+yarn add react-native-gesture-handler@2.14.1
 yarn add @react-navigation/native@6.1.9 react-native-screens@3.27.0 react-native-safe-area-context@4.7.4 @react-navigation/native-stack@6.9.17 @react-navigation/bottom-tabs@6.5.11
 yarn add @fortawesome/react-native-fontawesome@0.3.0 @fortawesome/fontawesome-svg-core@6.4.2 react-native-svg@14.0.0
 yarn add @fortawesome/free-solid-svg-icons@6.4.2

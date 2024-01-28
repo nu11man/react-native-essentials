@@ -20,5 +20,8 @@ i18n.use(initReactI18next).init({
   fallbackLng: 'en',
   interpolation: {
     escapeValue: false
+  },
+  react: {
+    useSuspense: false
   }
 });
