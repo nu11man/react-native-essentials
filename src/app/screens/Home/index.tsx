@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import React from 'react';
 import { View, Text, FlatList, ListRenderItem, RefreshControl } from 'react-native';
+import { useTranslation } from 'react-i18next';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import DataCard from '@components/DataCard';
-import CustomButton from '@components/CustomButton';
 import { white } from '@constants/colors';
 import { Screens } from '@constants/navigation';
 import { TabStackNavigationProps } from '@interfaces/navigation';
 import { NasaApodElement } from '@interfaces/nasa';
 import { ListKeyExtractor } from '@interfaces/globalInterfaces';
 import { useGetApodItemsQuery } from '@redux/api/nasa';
-import { signOut } from '@redux/slices/auth';
-import { useAppDispatch } from '@redux/hooks';
 
 import styles from './styles';
 
@@ -20,8 +17,6 @@ type HomeProps = TabStackNavigationProps<Screens.HOME>;
 
 const Home = ({ navigation }: HomeProps) => {
   const { t } = useTranslation();
-  const dispatch = useAppDispatch();
-  const [loader, setLoader] = useState(false);
   const { data, isFetching, refetch } = useGetApodItemsQuery(undefined);
 
   const handleApodPress = (apodId: string) => {
@@ -59,14 +54,6 @@ const Home = ({ navigation }: HomeProps) => {
           renderItem={renderItem}
           keyExtractor={keyExtractor}
           showsVerticalScrollIndicator={false}
-        />
-        <CustomButton
-          title="Sign Out"
-          onPress={() => {
-            setLoader(prev => !prev);
-            setTimeout(() => dispatch(signOut()), 2000);
-          }}
-          loading={loader}
         />
       </View>
     </SafeAreaView>

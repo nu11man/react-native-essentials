@@ -10,12 +10,15 @@ export default StyleSheet.create({
   },
   screen: {
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     flexGrow: 1,
     padding: 20,
     backgroundColor: darkBackground
   },
   header: {
     ...fonts.headerFont
+  },
+  button: {
+    alignSelf: 'auto'
   }
 });
